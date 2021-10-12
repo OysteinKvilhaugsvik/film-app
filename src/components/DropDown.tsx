@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export function DropDown({ onClickRating, onClickAction }: { onClickRating: any, onClickAction: any }) {
+export function DropDown({ onClickAction, onClickRating }: { onClickRating: any, onClickAction: any }) {
 
     const [showMenu, setShowMenu] = useState(false);
 
@@ -16,8 +16,8 @@ export function DropDown({ onClickRating, onClickAction }: { onClickRating: any,
             </button>
                 {showMenu ? (
                     <div>
-                        <button className='dropDownButton' onClick={onClickRating}> High Rating</button>
-                        <button className='dropDownButton' onClick={onClickAction}> Action movies</button>
+                        <button className='dropDownButton' onClick={onClickAction}>Action Movies</button>
+                        <button className='dropDownButton' onClick={onClickRating}>High Rating</button>
                     </div>
                 ) : (null)}
         </div>

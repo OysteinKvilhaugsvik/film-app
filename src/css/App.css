@@ -16,8 +16,9 @@
 
 table {
   margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
+  position: fixed;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
   width: 95%;
   border-collapse: collapse;
   border: 1px solid black;
@@ -63,9 +64,9 @@ tr:nth-child(odd) {
 .dropDown {
   position: relative;
   top: -23px;
-  float: left;
+  float: right;
   width: 120px;
-  margin-left: 10px;
+  margin-right: 25%;
   margin-bottom: 20px;
 
 }

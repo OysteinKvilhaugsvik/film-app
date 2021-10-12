@@ -110,7 +110,7 @@ function App() {
         <SearchBar search={tempSearchValue} onChange={handleChange}
           onClick={() => handleSearch(tempSearchValue)}/></div>
       <div>
-        <DropDown onClickRating={handleRating} onClickAction={handleAction} />
+        <DropDown onClickAction={handleAction} onClickRating={handleRating}/>
       </div>
       {console.log("search: " + searchValue)}
       <table>
