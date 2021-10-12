@@ -1,6 +1,7 @@
 import React from "react";
+import { ISort } from '../services/Interface'
 
-export function Sort({ children, sortBy, filterBy, ascension }: {children: any, sortBy: any, filterBy: any, ascension: any}) {
+export function Sort({ children, sortBy, filterBy, ascension }: ISort) {
 
     const sorting = (a: any, b: any) => {
 

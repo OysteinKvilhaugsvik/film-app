@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { IDropDown } from '../services/Interface'
 
-export function DropDown({ onClickAction, onClickRating }: { onClickRating: any, onClickAction: any }) {
+
+export function DropDown({ onClickAction, onClickRating }: IDropDown ) {
 
     const [showMenu, setShowMenu] = useState(false);
 

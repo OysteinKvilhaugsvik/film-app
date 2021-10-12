@@ -1,5 +1,6 @@
+import { ISearchBar } from '../services/Interface'
 
-export function SearchBar ({search, onClick, onChange} : {search: any, onClick: any, onChange: any}) {
+export function SearchBar ({search, onClick, onChange} : ISearchBar) {
 
     return(
         <>
