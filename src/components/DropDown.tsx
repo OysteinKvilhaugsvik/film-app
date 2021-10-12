@@ -13,14 +13,16 @@ export function DropDown({ onClickAction, onClickRating }: IDropDown ) {
 
     return (
         <div className='dropDown'>
-            <button className='dropDownButton' onClick={handleMenu}>
-                Filter by
+            <button className='dropDownFilter' onClick={handleMenu}>
+                Filter by<i className="arrow"></i>   
             </button>
                 {showMenu ? (
-                    <div>
+                    <>
+                        <input className="checkBox" id="cbox1" type="checkbox"/>
                         <button className='dropDownButton' onClick={onClickAction}>Action Movies</button>
+                        <input className="checkBox" id="cbox2" type="checkbox"/>
                         <button className='dropDownButton' onClick={onClickRating}>High Rating</button>
-                    </div>
+                    </>
                 ) : (null)}
         </div>
     );

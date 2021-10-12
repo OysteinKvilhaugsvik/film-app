@@ -31,7 +31,7 @@ th {
   background-color: #454f63;
   color: white;
   font-size: large;
-  
+  cursor: pointer;
 }
 
 tr, td {
@@ -68,10 +68,39 @@ tr:nth-child(odd) {
   width: 120px;
   margin-right: 25%;
   margin-bottom: 20px;
+}
 
+.dropDownFilter {
+  width: 120px;
+  cursor: pointer;
 }
 
 .dropDownButton {
-  width: 120px;
+  width: 100px;
+  cursor: pointer;
+  display: inline-block;
+  word-break: break-all; 
 }
+
+.checkBox {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 6px;
+}
+
+.searchBarButton {
+  cursor: pointer;
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 1px 1px 0;
+  float:right;
+  padding: 4px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+
+
 

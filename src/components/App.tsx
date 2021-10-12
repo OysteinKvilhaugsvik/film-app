@@ -15,12 +15,12 @@ function App() {
   const [sortBy, setSortBy] = useState("6");
   const [ascension, setAscension] = useState("DSC");
   const [filterBy, setFilterBy] = useState("0");
-  const [showMore, setShowMore] = useState();
+  const [showMore, setShowMore] = useState<number>();
 
   let tableHeader: string[] = ['Title', 'Runtime', 'Director', 'Genres',
     'Year', 'imdbRating', 'imdbVotes', 'Country'];
 
-  const getMoviesID = async (searchValue: any) => {
+  const getMoviesID = async (searchValue: string) => {
 
     var page = 1;
     const movieListID: any[] = [];
@@ -65,7 +65,7 @@ function App() {
     setTempSearchValue(event.target.value)
   }
 
-  const handleSearch = (searchValue: any) => {
+  const handleSearch = (searchValue: string) => {
     setSearchValue(searchValue)
     setFilterBy("0");
   }
@@ -87,17 +87,25 @@ function App() {
     console.log("Ascensison: " + ascension)
   }
 
-  const handleRating = () => {
-    if (filterBy === "5") { setFilterBy("0") }
-    else { setFilterBy("5") }
-  }
-
   const handleAction = () => {
     if (filterBy === "3") { setFilterBy("0") }
     else { setFilterBy("3") }
+
+    var cbox = (document.getElementById('cbox1') as HTMLInputElement);
+    if(cbox.checked) { cbox.checked = false }
+    else { cbox.checked = true }
   }
 
-  const handleShowMore = (index: any) => {
+  const handleRating = () => {
+    if (filterBy === "5") { setFilterBy("0") }
+    else { setFilterBy("5") }
+
+    var cbox = (document.getElementById('cbox2') as HTMLInputElement);
+    if(cbox.checked) { cbox.checked = false }
+    else { cbox.checked = true }
+  }
+
+  const handleShowMore = (index: number) => {
     if (index === showMore) { setShowMore(undefined) }
     else { setShowMore(index) }
   }

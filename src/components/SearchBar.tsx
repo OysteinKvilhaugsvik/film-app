@@ -5,11 +5,10 @@ export function SearchBar ({search, onClick, onChange} : ISearchBar) {
     return(
         <>
             <input
-            className="searchBar"
             placeholder="search..."
             value={search}
             onChange={onChange}>
-            </input> <button onClick={onClick}>Search</button>
+            </input><button className='searchBarButton' onClick={onClick}>Search</button>
         </>
         );
                 

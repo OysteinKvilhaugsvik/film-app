@@ -1,3 +1,4 @@
+import { MouseEventHandler } from "react";
 
 export interface moviesID {
     imdbID: string,
@@ -26,11 +27,11 @@ export interface moviesFull {
 
 export interface ISearchBar {
     search: string,
-    onClick: React.MouseEventHandler<HTMLButtonElement>,
+    onClick: MouseEventHandler<HTMLButtonElement>,
     onChange: any,
 }
 
 export interface IDropDown {
-    onClickAction: React.MouseEventHandler<HTMLButtonElement>,
-    onClickRating: React.MouseEventHandler<HTMLButtonElement>,
+    onClickAction: MouseEventHandler<HTMLButtonElement>,
+    onClickRating: MouseEventHandler<HTMLButtonElement>,
 }
