@@ -108,7 +108,7 @@ function App() {
       <header className="App-header" />
       <div>
         <SearchBar search={tempSearchValue} onChange={handleChange}
-          onClick={() => handleSearch(tempSearchValue)} /></div>
+          onClick={() => handleSearch(tempSearchValue)}/></div>
       <div>
         <DropDown onClickRating={handleRating} onClickAction={handleAction} />
       </div>
@@ -136,18 +136,16 @@ function App() {
               </tr>
                 {showMore === index ? (
                   <tr className="modal">
-                    <td colSpan={5}><b>Plot: </b>{moviesFull.Plot}</td>
-                    <td><b>Actors: </b>{moviesFull.Actors}</td>
+                    <td colSpan={4}><b>Plot: </b>{moviesFull.Plot}</td>
+                    <td colSpan={2}><b>Actors: </b>{moviesFull.Actors}</td>
                     <td colSpan={2}><img src={moviesFull.Poster} alt="No Poster"
                       height="250" width="200" /></td>
                   </tr>
                 ) : (null)}</>
             )))}
           </Sort>
-
         </tbody>
       </table>
-
     </div>
   );
 
