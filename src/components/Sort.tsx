@@ -1,6 +1,6 @@
 import React from "react";
 
-export function Sort({ children, sortBy, filterBy, ascension }: { children: any, sortBy: any, filterBy: any, ascension: any }) {
+export function Sort({ children, sortBy, filterBy, ascension }: {children: any, sortBy: any, filterBy: any, ascension: any}) {
 
     const sorting = (a: any, b: any) => {
 
