@@ -1,0 +1,71 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  margin-bottom: 5px;
+}
+
+table {
+  position: absolute;
+  margin-top: 50px;
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+th {
+  border: 2px solid black;
+  padding: 15px;
+}
+
+tr, td {
+  border: 1px solid black;
+  padding: 5px;
+  
+}
+
+.modal {
+  opacity: 0;
+  animation: fade-in-right ease 0.6s forwards;
+  max-height: 250px;
+}
+
+  @keyframes fade-in-right {
+    from {
+      opacity: 0;
+      transform: translateX(-15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+    
+tr:nth-child(odd) {
+  background-color: lightgrey;
+}
+
+.dropDown {
+  position: relative;
+  top: -23px;
+  float: left;
+  width: 120px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+
+}
+
+.dropDownButton {
+  width: 120px;
+}
+
