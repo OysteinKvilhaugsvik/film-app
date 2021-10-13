@@ -1,4 +1,7 @@
 import '../css/App.css';
+import '../css/dropDown.css';
+import '../css/table.css';
+import '../css/modal.css';
 import React, { useState, useEffect } from 'react';
 import SearchBar from './SearchBar';
 import axios from 'axios';
@@ -106,6 +109,7 @@ function App() {
   }
 
   const handleShowMore = (index: number) => {
+    console.log(showMore);
     if (index === showMore) { setShowMore(undefined) }
     else { setShowMore(index) }
   }
@@ -133,27 +137,34 @@ function App() {
           <Sort sortBy={sortBy} filterBy={filterBy} ascension={ascension}>
             {moviesFull.map(((moviesFull, index) => (
               <><tr key={index} onClick={() => handleShowMore(index)}>
-                <td>{moviesFull.Title}</td>
-                <td>{moviesFull.Runtime}</td>
-                <td>{moviesFull.Director}</td>
-                <td>{moviesFull.Genre}</td>
-                <td>{moviesFull.Year}</td>
-                <td>{moviesFull.imdbRating}</td>
-                <td>{moviesFull.imdbVotes}</td>
-                <td>{moviesFull.Country}</td>
-              </tr>
-                {showMore === index ? (
-                  <tr className="modal">
-                    <td colSpan={4}><b>Plot: </b>{moviesFull.Plot}</td>
-                    <td colSpan={2}><b>Actors: </b>{moviesFull.Actors}</td>
-                    <td colSpan={2}><img src={moviesFull.Poster} alt="No Poster"
-                      height="250" width="200" /></td>
-                  </tr>
-                ) : (null)}</>
+                  <td>{moviesFull.Title}</td>
+                  <td>{moviesFull.Runtime}</td>
+                  <td>{moviesFull.Director}</td>
+                  <td>{moviesFull.Genre}</td>
+                  <td>{moviesFull.Year}</td>
+                  <td>{moviesFull.imdbRating}</td>
+                  <td>{moviesFull.imdbVotes}</td>
+                  <td>{moviesFull.Country}</td>
+                </tr>
+              </>
             )))}
           </Sort>
         </tbody>
       </table>
+        {showMore !== undefined ? (
+          <div className="shadow">
+            <div className="modal">
+              <div className="modal-content">
+                <div className="title"> {moviesFull[showMore].Title}</div>
+                <div className="plot"><b>Plot: </b>{moviesFull[showMore].Plot}</div>
+                <img src={moviesFull[showMore].Poster} 
+                alt="No Poster" className="poster"/>
+                <button className="closeButton" onClick={() => setShowMore(undefined)}>close</button>
+              </div>
+            </div>
+          </div>
+          ) : (null)}
+
     </div>
   );
 

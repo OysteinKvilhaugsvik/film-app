@@ -6,8 +6,8 @@ export function Sort({ children, sortBy, filterBy, ascension }: ISort) {
     const sorting = (a: any, b: any) => {
 
         //Finner verdiene som skal sorteres
-        var propA = a.props.children[0].props.children[sortBy].props.children;
-        var propB = b.props.children[0].props.children[sortBy].props.children;
+        var propA = a.props.children.props.children[sortBy].props.children;
+        var propB = b.props.children.props.children[sortBy].props.children;
 
         //Sorterer etter nummer
         if (!isNaN(parseInt(propA.substring(0, 2)))) {
@@ -52,7 +52,7 @@ export function Sort({ children, sortBy, filterBy, ascension }: ISort) {
 
     const filtering = (a: any) => {
 
-        var propA = a.props.children[0].props.children[filterBy].props.children;
+        var propA = a.props.children.props.children[filterBy].props.children;
 
         //Filter etter høy imdbRating
         if(filterBy === "5") {

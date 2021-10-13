@@ -13,93 +13,15 @@
   color: white;
   margin-bottom: 5px;
 }
-
-table {
-  margin-top: 50px;
-  position: absolute;
-  margin-left: 2.5%;
-  margin-right: 2.5%;
-  width: 95%;
-  border-collapse: collapse;
-  border: 1px solid black;
-}
-
-th {
-  border: 2px solid black;
-  height: 50px;
-  padding: 15px;
-  background-color: #454f63;
-  color: white;
-  font-size: large;
-  cursor: pointer;
-}
-
-tr, td {
-  border: 1px solid black;
-  padding: 5px;
-  
-}
-
-.modal {
-  opacity: 0;
-  animation: fade-in-right ease 0.6s forwards;
-  max-height: 250px;
-}
-
-  @keyframes fade-in-right {
-    from {
-      opacity: 0;
-      transform: translateX(-15px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
     
 tr:nth-child(odd) {
   background-color: lightgrey;
-}
-
-.dropDown {
-  position: relative;
-  top: -23px;
-  float: right;
-  width: 120px;
-  margin-right: 25%;
-  margin-bottom: 20px;
-}
-
-.dropDownFilter {
-  width: 120px;
-  cursor: pointer;
-}
-
-.dropDownButton {
-  width: 100px;
-  cursor: pointer;
-  display: inline-block;
-  word-break: break-all; 
-}
-
-.checkBox {
-  display: inline-block;
-  vertical-align: top;
-  margin-top: 6px;
 }
 
 .searchBarButton {
   cursor: pointer;
 }
 
-.arrow {
-  border: solid black;
-  border-width: 0 1px 1px 0;
-  float:right;
-  padding: 4px;
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-}
 
 
 

@@ -1,0 +1,25 @@
+table {
+    margin-top: 50px;
+    position: absolute;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    width: 95%;
+    border-collapse: collapse;
+    border: 1px solid black;
+  }
+  
+  th {
+    border: 2px solid black;
+    height: 50px;
+    padding: 15px;
+    background-color: #454f63;
+    color: white;
+    font-size: large;
+    cursor: pointer;
+  }
+  
+  tr, td {
+    border: 1px solid black;
+    padding: 5px;
+    
+  }
